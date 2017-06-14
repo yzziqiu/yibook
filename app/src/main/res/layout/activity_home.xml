@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <com.got3.yibook.HeadView
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+    </com.got3.yibook.HeadView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp"
+        android:id="@+id/home_rl1"
+        android:layout_below="@+id/head"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <TextView
+            android:id="@+id/hometv_selectbook"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/fbm_select"
+            android:gravity="center"
+            android:text="选书"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_base_16"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <TextView
+            android:id="@+id/hometv_donbook"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/fbm_select"
+            android:gravity="center"
+            android:text="捐书"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_base_16"
+            android:layout_centerHorizontal="true" />
+        <TextView
+            android:id="@+id/hometv_sellbook"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/fbm_select"
+            android:gravity="center"
+            android:text="易书"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_base_16"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <!--广告-->
+    <com.got3.yibook.SlideView
+        android:id="@+id/slideshowView"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/home_rl1"/>
+
+    <!--信息统计栏-->
+    <TextView
+        android:id="@+id/hometv_statistical"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="left"
+        android:text="统计"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_base_16"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/slideshowView"
+        android:paddingTop="10dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"/>
+
+
+
+ <!--   <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/show_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/home_rl2"
+        android:layout_alignRight="@+id/hometv_statistical"
+        android:layout_alignEnd="@+id/hometv_statistical"
+        android:layout_below="@+id/hometv_statistical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/show_height"
+        android:layout_weight="1"
+        android:paddingTop="5dp"
+        android:layout_below="@+id/hometv_statistical"
+        android:id="@+id/home_ll">
+        <!--积书量-->
+        <RelativeLayout
+            android:layout_width="@dimen/show_weight"
+            android:layout_height="@dimen/show_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/relativeLayout1"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="积书量"
+                android:gravity="center"
+                android:id="@+id/hometv_books"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_above="@+id/hometv_books_no" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="***"
+                android:gravity="center"
+                android:id="@+id/hometv_books_no"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+            <View
+                android:layout_width="@dimen/line_weight"
+                android:layout_height="@dimen/line_long"
+                android:background="@color/line_color2"
+                android:id="@+id/line1"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                 />
+        </RelativeLayout>
+
+        <!--捐书量-->
+        <RelativeLayout
+            android:layout_width="@dimen/show_weight"
+            android:layout_height="@dimen/show_height"
+            android:id="@+id/relativeLayout2"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/relativeLayout1"
+            android:layout_toEndOf="@+id/relativeLayout1"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="捐书量"
+                android:gravity="center"
+                android:id="@+id/hometv_donbooks"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_above="@+id/hometv_donbooks_no" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="***"
+                android:gravity="center"
+                android:id="@+id/hometv_donbooks_no"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+        <!--关注量-->
+        <RelativeLayout
+            android:layout_width="@dimen/show_weight"
+            android:layout_height="@dimen/show_height"
+            android:id="@+id/relativeLayout3"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/relativeLayout4"
+            android:layout_toStartOf="@+id/relativeLayout4"
+            android:layout_weight="1">
+            <View
+            android:layout_width="@dimen/line_weight"
+            android:layout_height="@dimen/line_long"
+            android:background="@color/line_color2"
+            android:id="@+id/line2"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关注量"
+                android:gravity="center"
+                android:id="@+id/hometv_follow"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_above="@+id/hometv_follow_no" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="***"
+                android:gravity="center"
+                android:id="@+id/hometv_follow_no"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+        <!--受益人-->
+        <RelativeLayout
+            android:layout_width="@dimen/show_weight"
+            android:layout_height="@dimen/show_height"
+            android:id="@+id/relativeLayout4"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="1">
+            <View
+                android:layout_width="@dimen/line_weight"
+                android:layout_height="@dimen/line_long"
+                android:background="@color/line_color2"
+                android:id="@+id/line3"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="受益人"
+                android:gravity="center"
+                android:id="@+id/hometv_people"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_above="@+id/hometv_people_no" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="***"
+                android:gravity="center"
+                android:id="@+id/hometv_people_no"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:id="@+id/homeview_blank1"
+        android:layout_below="@+id/home_ll"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/line_color"
+        android:layout_below="@+id/homeview_blank1"
+        android:id="@+id/homeview_line" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/homeview_blank"
+        android:layout_below="@+id/homeview_line"/>
+
+
+    <!--捐书排行榜-->
+    <TextView
+        android:id="@+id/hometv_rank"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:gravity="left"
+        android:text=" 捐书排行榜"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_base_16"
+        android:layout_below="@+id/homeview_blank"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/home_rl3"
+        android:paddingTop="15dp"
+        android:layout_alignRight="@+id/hometv_rank"
+        android:layout_alignEnd="@+id/hometv_rank"
+        android:layout_below="@+id/hometv_rank"
+        android:paddingLeft="40dp"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <!--捐书排行榜 第1名-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:id="@+id/homerelativeLayout_1"
+        >
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/hometv_rank1"
+            android:text="***"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:text="已捐书"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/hometv_rank1_books"
+            android:layout_toStartOf="@+id/hometv_rank1_books"
+            android:id="@+id/textView_rank1" />
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/hometv_rank1_books"
+            android:text="***"
+            android:layout_alignTop="@+id/textView_rank12"
+            android:layout_centerHorizontal="true" />
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="fill_parent"
+            android:text="本"
+            android:id="@+id/textView_rank12"
+            android:layout_toRightOf="@+id/hometv_rank1_books"
+            android:layout_alignParentTop="true"
+            android:layout_alignBottom="@+id/textView_rank1" />
+        </RelativeLayout>
+        <View
+            android:layout_width="@dimen/line_long2"
+            android:layout_height="@dimen/line_height"
+            android:background="@color/line_color"
+            android:layout_below="@+id/homerelativeLayout_1"
+            android:id="@+id/homeview_linerank1"
+            />
+
+        <!--捐书排行榜 第2名-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/homerelativeLayout_1"
+            android:id="@+id/homerelativeLayout_2">
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/hometv_rank2"
+                android:text="***"/>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="fill_parent"
+                android:text="已捐书"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/hometv_rank2_books"
+                android:layout_toStartOf="@+id/hometv_rank2_books"
+                android:id="@+id/textView_rank2" />
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/hometv_rank2_books"
+                android:text="***"
+                android:layout_alignTop="@+id/textView_rank22"
+                android:layout_centerHorizontal="true" />
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="fill_parent"
+                android:text="本"
+                android:id="@+id/textView_rank22"
+                android:layout_toRightOf="@+id/hometv_rank2_books"
+                android:layout_alignParentTop="true"
+                android:layout_alignBottom="@+id/textView_rank2" />
+        </RelativeLayout>
+        <View
+            android:layout_width="@dimen/line_long2"
+            android:layout_height="@dimen/line_height"
+            android:background="@color/line_color"
+            android:layout_below="@+id/homerelativeLayout_2"
+            android:id="@+id/homeview_linerank2"
+            />
+
+        <!--捐书排行榜 第3名-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/homerelativeLayout_2"
+            android:id="@+id/homerelativeLayout_3">
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/hometv_rank3"
+                android:text="***"/>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="fill_parent"
+                android:text="已捐书"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/hometv_rank3_books"
+                android:layout_toStartOf="@+id/hometv_rank3_books"
+                android:id="@+id/textView_rank3" />
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/hometv_rank3_books"
+                android:text="***"
+                android:layout_alignTop="@+id/textView_rank32"
+                android:layout_centerHorizontal="true" />
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="fill_parent"
+                android:text="本"
+                android:id="@+id/textView_rank32"
+                android:layout_toRightOf="@+id/hometv_rank3_books"
+                android:layout_alignParentTop="true"
+                android:layout_alignBottom="@+id/textView_rank3" />
+        </RelativeLayout>
+        <View
+            android:layout_width="@dimen/line_long2"
+            android:layout_height="@dimen/line_height"
+            android:background="@color/line_color"
+            android:layout_below="@+id/homerelativeLayout_3"
+            android:id="@+id/homeview_linerank3"
+            />
+
+        <!--捐书排行榜 第4名-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/homerelativeLayout_3"
+            android:id="@+id/homerelativeLayout_4">
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/hometv_rank4"
+                android:text="***"/>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="fill_parent"
+                android:text="已捐书"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/hometv_rank4_books"
+                android:layout_toStartOf="@+id/hometv_rank4_books"
+                android:id="@+id/textView_rank4" />
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/hometv_rank4_books"
+                android:text="***"
+                android:layout_alignTop="@+id/textView_rank42"
+                android:layout_centerHorizontal="true" />
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="fill_parent"
+                android:text="本"
+                android:id="@+id/textView_rank42"
+                android:layout_toRightOf="@+id/hometv_rank4_books"
+                android:layout_alignParentTop="true"
+                android:layout_alignBottom="@+id/textView_rank4" />
+        </RelativeLayout>
+        <View
+            android:layout_width="@dimen/line_long2"
+            android:layout_height="@dimen/line_height"
+            android:background="@color/line_color"
+            android:layout_below="@+id/homerelativeLayout_4"
+            android:id="@+id/homeview_linerank4"
+            />
+
+        <!--捐书排行榜 第5名-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/homerelativeLayout_4"
+            android:id="@+id/homerelativeLayout_5">
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/hometv_rank5"
+                android:text="***"/>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="fill_parent"
+                android:text="已捐书"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/hometv_rank5_books"
+                android:layout_toStartOf="@+id/hometv_rank5_books"
+                android:id="@+id/textView_rank5" />
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/hometv_rank5_books"
+                android:text="***"
+                android:layout_alignTop="@+id/textView_rank52"
+                android:layout_centerHorizontal="true" />
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="fill_parent"
+                android:text="本"
+                android:id="@+id/textView_rank52"
+                android:layout_toRightOf="@+id/hometv_rank5_books"
+                android:layout_alignParentTop="true"
+                android:layout_alignBottom="@+id/textView_rank5" />
+        </RelativeLayout>
+        <View
+            android:layout_width="@dimen/line_long2"
+            android:layout_height="@dimen/line_height"
+            android:background="@color/line_color"
+            android:layout_below="@+id/homerelativeLayout_5"
+            android:id="@+id/homeview_linerank5"
+            />
+    </RelativeLayout>
+
+    <!--linear的每行宽度设置
+<ScrollView
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/white"
+android:id="@+id/scrollView"
+android:fillViewport="false">
+    </ScrollView>-->
+</RelativeLayout>

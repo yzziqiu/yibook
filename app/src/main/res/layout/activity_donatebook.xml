@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.got3.yibook.DonatebookActivity">
+
+    <com.got3.yibook.HeadView
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+    </com.got3.yibook.HeadView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请选择捐书的方式"
+        android:id="@+id/textView2_don"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/head"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="上门回收"
+        android:id="@+id/recycling"
+        android:background="@drawable/ok_botton"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自行送至"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/ok_botton"
+        android:id="@+id/Independent"
+         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="感谢您的捐赠"
+        android:id="@+id/textView_don"
+        android:layout_marginTop="15dp"
+         />
+
+</LinearLayout>

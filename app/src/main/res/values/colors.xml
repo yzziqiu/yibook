@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e75b69</color>
+    <color name="colorPrimaryDark">#63f8bf</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="red">#fd8d8d</color>
+    <color name="blue">#8d9dfd</color>
+    <color name="white">#FFFFFF</color>
+    <color name="orange">#f37301</color>
+    <color name="black">#000000</color>
+    <color name="gray">#d7d3d3</color>
+
+    <!-- 分割线及边框颜色 -->
+    <color name="line_color">#EDEDED</color>
+    <color name="line_color2">#dfdede</color>
+    <!-- 左侧菜单字体颜色 -->
+    <color name="left_menu_txt_color">#4C4C4C</color>
+    <color name="left_menu_txt_main_color">#8c8888</color>
+    <color name="left_menu_txt_personal_color">#d7d3d3</color>
+    <!-- 左侧item点击后的颜色 -->
+    <color name="left_menu_item_press_color">#EDEDED</color>
+    <!-- head的颜色 -->
+    <color name="head_text_color">#d7d3d3</color>
+</resources>

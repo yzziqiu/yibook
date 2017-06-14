@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.got3.yibook">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme2">
+        <activity
+            android:name=".WelcomeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="Login" />
+        <activity
+            android:name=".RegisterActivity"
+            android:label="注册" />
+        <activity
+            android:name=".FreebookActivity"
+            android:label="免费书" />
+        <activity
+            android:name=".TradebookActivity"
+            android:label="折扣书" />
+        <activity android:name=".DonatebookActivity" />
+        <activity
+            android:name=".FreebmessageActivity"
+            android:label="详细信息" />
+        <activity
+            android:name=".BuybookActivity"
+            android:label="详细信息" />
+        <activity
+            android:name=".IndependentActivity"
+            android:label="自行送至" />
+        <activity
+            android:name=".RecyclingActivity"
+            android:label="上门回收" />
+
+        <receiver android:name=".HeadView">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/head_view_info" />
+        </receiver>
+        <receiver android:name=".BottomView">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/bottom_view_info" />
+        </receiver>
+
+        <activity android:name=".WantfreebookActivity" />
+
+
+        <activity android:name=".BuybookmenuActivity" />
+        <activity android:name=".MainActivity" />
+
+        <receiver android:name=".HeadViewFB">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/head_view_fb_info" />
+        </receiver>
+    </application>
+
+</manifest>

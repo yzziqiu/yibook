@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.got3.yibook.MainActivity">
+
+    <com.got3.yibook.HeadView
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+    </com.got3.yibook.HeadView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp"
+        android:id="@+id/main_rl1"
+        android:layout_below="@+id/head"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <RelativeLayout
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/mainrl_selectbook">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_shopping_car"
+                android:id="@+id/main_shoppingcar"/>
+            <TextView
+                android:id="@+id/maintv_selectbook"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="选书"
+                android:textColor="@color/black"
+                android:layout_below="@+id/main_shoppingcar"
+                android:textSize="@dimen/text_size_base_16"
+                android:layout_alignParentLeft="true"/>
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/mainrl_donbook">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_book"
+                android:id="@+id/main_book"/>
+
+            <TextView
+                android:id="@+id/maintv_donbook"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="捐书"
+                android:textColor="@color/black"
+                android:layout_below="@+id/main_book"
+                android:textSize="@dimen/text_size_base_16"
+                />
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/mainrl_sellbook"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/main_sell"
+                android:src="@drawable/ic_sellbook"/>
+
+            <TextView
+                android:id="@+id/maintv_sellbook"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="易书"
+                android:textColor="@color/black"
+                android:layout_below="@+id/main_sell"
+                android:textSize="@dimen/text_size_base_16" />
+
+            </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!--广告-->
+    <com.got3.yibook.SlideView
+        android:id="@+id/slideshowView"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/main_rl1"/>
+
+</RelativeLayout>

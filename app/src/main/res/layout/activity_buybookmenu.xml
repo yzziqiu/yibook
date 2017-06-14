@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.got3.yibook.BuybookmenuActivity">
+
+    <com.got3.yibook.HeadViewFreebook
+        android:id="@+id/head_bbm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/head_height"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+    </com.got3.yibook.HeadViewFreebook>
+
+ <!--   <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head_bbm">
+
+        <include layout="@layout/selectbook_main" />
+
+        <include layout="@layout/part_left_select_menu" />
+
+    </android.support.v4.widget.DrawerLayout>-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:id="@+id/bbmview_blank1"
+        android:layout_below="@+id/head_bbm"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/button_head_up"
+        android:layout_below="@+id/bbmview_blank1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/bbmrl_search">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bbmtv_searchtext"
+            android:gravity="left"
+            android:text="搜索..."
+            android:ems="20"
+            android:textSize="@dimen/text_size_base_12"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/head_text_color"/>
+
+        <View
+            android:layout_width="@dimen/line_weight"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:id="@+id/bbm_line"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@+id/bbmtv_searchtext"/>
+
+        <SearchView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bbmtv_searchbutton"
+            android:layout_toRightOf="@+id/bbm_line" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:id="@+id/bbmview_blank2"
+        android:layout_below="@+id/bbmrl_search"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height"
+        android:background="@color/line_color"
+        android:layout_below="@+id/bbmview_blank2"
+        android:id="@+id/bbmview_line" />
+</RelativeLayout>

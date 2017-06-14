@@ -1,0 +1,33 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!--字体大小设置-->
+    <dimen name="text_size_base_12">12sp</dimen>
+    <dimen name="text_size_base_14">14sp</dimen>
+    <dimen name="text_size_base_16">16sp</dimen>
+    <dimen name="text_size_base_18">18sp</dimen>
+    <dimen name="text_size_base_24">24sp</dimen>
+    <!--线的厚度-->
+    <dimen name="line_height">1dp</dimen>
+    <dimen name="line_weight">1dp</dimen>
+    <!--线的高度/长度-->
+    <dimen name="line_long">40dp</dimen>
+    <dimen name="line_long2">230dp</dimen>
+    <!--左侧菜单设置-->
+    <dimen name="left_item_height">50dp</dimen>
+    <dimen name="left_item_margin">20dp</dimen>
+    <!--linear的每行宽度设置-->
+    <dimen name="widget_width">300dp</dimen>
+    <!--主页键位设置-->
+    <dimen name="show_height">60dp</dimen>
+    <dimen name="show_weight">88dp</dimen>
+    <!--head设置-->
+    <dimen name="head_height">50dp</dimen>
+
+    <!--
+Refer to App Widget Documentation for margin information
+http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
+    -->
+    <dimen name="widget_margin">8dp</dimen>
+</resources>
